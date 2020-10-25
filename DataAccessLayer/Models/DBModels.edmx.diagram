@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="6c028ff16c07498dac4369e30a4c00ea" Name="Diagram1">
+        <EntityTypeShape EntityType="dotnetModel.Category" Width="1.5" PointX="0.75" PointY="1.5" />
+        <EntityTypeShape EntityType="dotnetModel.Employ" Width="1.5" PointX="5.75" PointY="4.75" />
+        <EntityTypeShape EntityType="dotnetModel.OrderDetail" Width="1.5" PointX="5.25" PointY="1.375" />
+        <EntityTypeShape EntityType="dotnetModel.Order" Width="1.5" PointX="3" PointY="6.125" />
+        <EntityTypeShape EntityType="dotnetModel.Product" Width="1.5" PointX="3" PointY="1" />
+        <EntityTypeShape EntityType="dotnetModel.Register" Width="1.5" PointX="0.75" PointY="5.5" />
+        <AssociationConnector Association="dotnetModel.FK__Product__Categor__286302EC" />
+        <AssociationConnector Association="dotnetModel.FK__OrderDeta__Order__2E1BDC42" />
+        <AssociationConnector Association="dotnetModel.FK__OrderDeta__Produ__2F10007B" />
+        <AssociationConnector Association="dotnetModel.FK__Orders__CustId__2B3F6F97" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

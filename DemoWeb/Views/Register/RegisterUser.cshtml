@@ -1,0 +1,223 @@
+﻿@model DemoWeb.Models.Register
+
+
+
+@{ 
+    Layout = null;
+
+}
+<html>
+
+<head class="header ">
+    <link href="~/Content/Site.css" rel="stylesheet" />
+
+</head>
+<body class="definBody defineHero" >
+        
+    <header>
+        <div class="container">
+
+            <nav class="NavSection">
+               <ul>
+                   <li><a href="#">Home</a></li>
+                   <li><a href="#">About Us</a></li>
+                   <li><a href="#">Contact</a></li>
+                   <li><a href="#">Details</a></li>
+               </ul>
+            </nav>
+        </div>
+            
+
+    </header>
+
+    <div class="container">
+        
+        @using (Html.BeginForm("RegisterUser", "Register", FormMethod.Post, new { id= "Register-form" }))
+        {
+            @Html.AntiForgeryToken()
+            
+                <div class="form-group">
+                    @Html.LabelFor(model => model.FirstName, new { @class = "control-label col-offset-1 col-lg-2 col-md-2 col-sm-2 col-xs-2" })
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                        @Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { @class = "form-control", @placeholder = "ProjectName" } })
+                        @Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    @Html.LabelFor(model => model.LastName, new { @class = "control-label col-offset-1 col-lg-2 col-md-2 col-sm-2 col-xs-2" })
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                        @Html.EditorFor(model => model.LastName, new { htmlAttributes = new { @class = "form-control", @placeholder = "ProjectName" } })
+                        @Html.ValidationMessageFor(model => model.LastName, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Username, new { @class = "control-label col-offset-1 col-lg-2 col-md-2 col-sm-2 col-xs-2" })
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                        @Html.EditorFor(model => model.Username, new { htmlAttributes = new { @class = "form-control", @placeholder = "ProjectName" } })
+                        @Html.ValidationMessageFor(model => model.Username, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Password, new { @class = "control-label col-offset-1 col-lg-2 col-md-2 col-sm-2 col-xs-2" })
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                        @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control", @placeholder = "ProjectName" } })
+                        @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    @Html.LabelFor(model => model.EMail, new { @class = "control-label col-offset-1 col-lg-2 col-md-2 col-sm-2 col-xs-2" })
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                        @Html.EditorFor(model => model.EMail, new { htmlAttributes = new { @class = "form-control", @placeholder = "Name" } })
+                        @Html.ValidationMessageFor(model => model.EMail, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                             <div class="form-group">
+                    @Html.LabelFor(model => model.PrimaryAddress1, new { @class = "control-label col-offset-1 col-lg-2 col-md-2 col-sm-2 col-xs-2" })
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                        @Html.EditorFor(model => model.PrimaryAddress1, new { htmlAttributes = new { @class = "form-control", @placeholder = "ProjectName" } })
+                        @Html.ValidationMessageFor(model => model.PrimaryAddress1, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.PrimaryAddress2, new { @class = "control-label col-offset-1 col-lg-2 col-md-2 col-sm-2 col-xs-2" })
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                        @Html.EditorFor(model => model.PrimaryAddress2, new { htmlAttributes = new { @class = "form-control", @placeholder = "ProjectName" } })
+                        @Html.ValidationMessageFor(model => model.PrimaryAddress2, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.State, new { @class = "control-label col-offset-1 col-lg-2 col-md-2 col-sm-2 col-xs-2" })
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                        @Html.EditorFor(model => model.State, new { htmlAttributes = new { @class = "form-control", @placeholder = "ProjectName" } })
+                        @Html.ValidationMessageFor(model => model.State, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.City, new { @class = "control-label col-offset-1 col-lg-2 col-md-2 col-sm-2 col-xs-2" })
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                        @Html.EditorFor(model => model.City, new { htmlAttributes = new { @class = "form-control", @placeholder = "ProjectName" } })
+                        @Html.ValidationMessageFor(model => model.City, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Country, new { @class = "control-label col-offset-1 col-lg-2 col-md-2 col-sm-2 col-xs-2" })
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                        @Html.EditorFor(model => model.Country, new { htmlAttributes = new { @class = "form-control", @placeholder = "ProjectName" } })
+                        @Html.ValidationMessageFor(model => model.Country, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.PostalCode, new { @class = "control-label col-offset-1 col-lg-2 col-md-2 col-sm-2 col-xs-2" })
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                        @Html.EditorFor(model => model.PostalCode, new { htmlAttributes = new { @class = "form-control", @placeholder = "ProjectName" } })
+                        @Html.ValidationMessageFor(model => model.PostalCode, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <input type="submit" value="Submit" class="btn btn-default" />
+                }
+
+
+
+
+
+            </div>
+
+    <button class="open-button" onclick="openForm()">Open Form</button>
+   
+         
+   
+    <div class="container">
+        @using (Html.BeginForm("Login", "Register", FormMethod.Post, new { @class = "form-container", id = "myForm" }))
+
+        {
+            @Html.AntiForgeryToken()    
+
+            <h1>Login</h1>
+
+
+            @Html.LabelFor(model => model.Username)
+            @Html.TextBoxFor(model => model.Username)
+
+            @Html.LabelFor(model => model.Password)
+            @Html.TextBoxFor(model => model.Password)
+
+
+
+
+
+            <input type="submit" value="Submit" class="btn btn-default" />
+            // <button type="submit" class="btn cancel" onclick="closeForm()">Close</button>
+
+        }
+    </div>
+
+
+
+
+
+</body>
+
+</html>
+
+
+<div>
+    <script src="~/Scripts/jquery-3.3.1.js"></script>
+    <script>
+        $("#myForm").on("submit", function (e) {
+            e.preventDefault();
+            debugger
+            $.ajax({
+                url: "/Register/Login",
+                type: "POST",
+                data: $(this).serialize(),
+                success: function (data) {
+                    console.log("Sucesss")
+                    debugger
+                    $("#result").html(data)
+                }
+            });
+        });
+
+
+
+
+        $("#Register-form").on("submit", function (e) {
+            e.preventDefault();
+            $.ajax({
+
+                url: "/Register/RegisterUser",
+                type: "POST",
+                data:$(this).serialize(),
+                success: function (data) {
+                 console.log("Sucesss")
+                debugger
+                $("#result").html(data)
+            }
+        });
+        });
+
+        function openForm() {
+            document.getElementById("myForm").style.display = "block";
+        }
+
+        function closeForm() {
+            document.getElementById("myForm").style.display = "none";
+        }
+
+
+    </script>
+</div>
+
+
+
